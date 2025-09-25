@@ -9,7 +9,8 @@
 }
 /* Variables */
 :root {
-    /* Skip for now */
+    --main-color: #0075ff;
+    --second-color: #697b8c;
 }
 ul {
     list-style: none;
@@ -17,4 +18,87 @@ ul {
 a {
     text-decoration: none;
 }
+.container {
+    padding: 50px;
+}
 /* Start Styling */
+
+/* Start header */
+.site-header {
+    overflow: hidden;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+.site-header .header-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.site-header .header-inner .logo {
+    color: var(--main-color);
+}
+.site-header .header-inner .header-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.site-header .header-inner .header-links ul li.header-lnk a {
+    font-size: 21px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: var(--main-color);
+}
+.site-header .header-inner .header-links ul li.active a {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+/* Start landing */
+.landing {
+    height: calc(100vh - 80.67px);
+    background-image: url(../Images/cloud.png);
+    background-repeat: no-repeat;
+}
+.landing .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.landing .container .inner-txt {
+    flex: 7;
+    text-align: center;
+}
+.landing .container .inner-txt .greeting {
+    font-size: 50px;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.landing .container .inner-txt .text {
+    color: var(--second-color);
+    font-size: 27px;
+    line-height: 1.2;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.landing .container .inner-txt .text .imp {
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+.landing .container .inner-txt .features-btn {
+    background-color: var(--main-color);
+    font-size: 25px;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.landing .container .inner-view {
+    flex: 5;
+    text-align: center;
+}
