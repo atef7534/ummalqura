@@ -1,0 +1,3 @@
+function handleBarIcon(target) {
+    
+}

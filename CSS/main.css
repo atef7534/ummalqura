@@ -41,6 +41,17 @@ a {
     align-items: center;
     justify-content: center;
 }
+.site-header .header-inner .header-links .menu-icon {
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .site-header .header-inner .header-links ul {
+        display: none;
+    }
+    .site-header .header-inner .header-links .menu-icon {
+        display: block;
+    }
+}
 .site-header .header-inner .header-links ul li.header-lnk a {
     font-size: 21px;
     padding: 4px 12px;
@@ -51,18 +62,51 @@ a {
     color: #fff;
     background-color: var(--main-color);
 }
-
+@media screen and (max-width: 1100px) {
+    .site-header .header-inner .header-links ul li.header-lnk a {
+        font-size: 17px;
+        padding: 4px 8px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .site-header .header-inner .header-links ul li.header-lnk a {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .site-header .header-inner .header-links ul li.header-lnk a {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+}
 /* Start landing */
 .landing {
     height: calc(100vh - 80.67px);
     background-image: url(../Images/cloud.png);
     background-repeat: no-repeat;
 }
+@media screen and (max-width: 900px) {
+    .landing {
+        background-position-x: -300px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .landing {
+        background-position-x: -600px;
+    }
+}
 .landing .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row-reverse;
+}
+@media screen and (max-width: 700px) {
+    .landing .container {
+        flex-direction: column;
+        gap: 60px;
+    }
 }
 .landing .container .inner-txt {
     flex: 7;
@@ -74,6 +118,27 @@ a {
     font-weight: bold;
     margin-bottom: 30px;
 }
+@media screen and (max-width: 1200px) {
+    .landing .container .inner-txt .greeting {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .landing .container .inner-txt .greeting {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .landing .container .inner-txt .greeting {
+        color: var(--main-color);
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .landing .container .inner-txt .greeting {
+        color: #FFF;
+    }
+}
 .landing .container .inner-txt .text {
     color: var(--second-color);
     font-size: 27px;
@@ -83,12 +148,39 @@ a {
     margin-right: auto;
     margin-bottom: 30px;
 }
+@media screen and (max-width: 1200px) {
+    .landing .container .inner-txt .text {
+        font-size: 20px;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .landing .container .inner-txt .text {
+        font-size: 15px;
+        width: 300px;
+    }
+}
 .landing .container .inner-txt .text .imp {
     display: block;
     font-size: 35px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+    .landing .container .inner-txt .text .imp {
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .landing .container .inner-txt .text .imp {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .landing .container .inner-txt .text .imp {
+        font-size: 17px;
+    }
 }
 .landing .container .inner-txt .features-btn {
     background-color: var(--main-color);
@@ -98,7 +190,42 @@ a {
     padding: 8px 12px;
     border-radius: 8px;
 }
+@media screen and (max-width: 700px) {
+    .landing .container .inner-txt .features-btn{
+        font-size: 14px;
+    }
+}
 .landing .container .inner-view {
     flex: 5;
     text-align: center;
+    transition: all ease-in-out 0.5s;
+    animation: up-and-down 5s linear infinite;
+    position: relative;
+}
+@media screen and (min-width: 1200px) {
+    .landing .container .inner-view {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .landing .container .inner-view {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .landing .container .inner-view {
+        width: 150px;
+    }
+}
+.landing .container .inner-view img {
+    width: 100%;
+}
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
 }
