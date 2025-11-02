@@ -47,7 +47,7 @@ body {
 /* Start Components */
 .special-heading {
   color: #ebeced;
-  font-size: 100px;
+  font-size: 70px;
   text-align: center;
   font-weight: 800;
   letter-spacing: -3px;
@@ -263,7 +263,7 @@ body {
   text-align: center;
   flex: 1;
   padding: 20px;
-  background-color: #3cb372bb;
+  background-color: #3cb372dc;
   border-radius: 5px;
   cursor: default;
   transition: 0.5s box-shadow linear;
@@ -291,76 +291,62 @@ body {
   margin-bottom: 20px;
 }
 /* End System */
-/* Start Features */
-.features {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: var(--main-color);
-}
-.features .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-.features .feat {
-  padding: 20px;
-  text-align: center;
-}
-.features .feat i {
-  color: var(--white-color);
-}
-.features .feat h3 {
-  font-weight: 800;
-  margin: 30px 0;
-  color: #ddd;
-}
-.features .feat p {
-  line-height: 1.8;
-  color: #ccc;
-  font-size: 17px;
-}
-/* End Features */
-/* Start Services  */
-.services {
+/* Start why?  */
+.whyus {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
-.services .services-content {
+.whyus .whyus-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   margin-top: 100px;
 }
-.services .services-content .srv {
+.whyus .whyus-content .col {
   display: flex;
-  margin-bottom: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.whyus .whyus-content .srv {
+  flex: 1;
+  display: flex;
+  align-items: flex-start; 
+  background: #fff; 
+  padding: 15px;
+  border-radius: 10px; 
 }
 @media (max-width: 767px) {
-  .services .services-content .srv {
+  .whyus .whyus-content .srv {
     flex-direction: column;
     text-align: center;
   }
 }
-.services .services-content .srv i {
+.whyus .whyus-content .srv i {
   color: var(--main-color);
   flex-basis: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.services .services-content .srv .text {
+.whyus .whyus-content .srv .text {
   flex: 1;
 }
-.services .services-content .srv .text h3 {
+.whyus .whyus-content .srv .text h3 {
   margin: 0 0 20px;
 }
-.services .services-content .srv .text p {
+.whyus .whyus-content .srv .text p {
   color: #444;
   font-weight: 300;
   line-height: 1.6;
 }
-.services .services-content .image {
+.whyus .whyus-content .image {
   text-align: center;
-  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.services .services-content .image::before {
+.whyus .whyus-content .image::before {
   content: "";
   background-color: var(--main-color);
   width: 100px;
@@ -370,7 +356,7 @@ body {
   right: 0;
   z-index: -1;
 }
-.services .services-content .image img {
+.whyus .whyus-content .image img {
   width: 260px;
 }
 @media (max-width: 1199px) {
@@ -378,7 +364,7 @@ body {
     display: none;
   }
 }
-/* Start Services  */
+/* End Why?  */
 /* Start Portfolio */
 .portfolio {
   padding-top: var(--section-padding);
