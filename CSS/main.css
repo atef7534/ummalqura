@@ -1,6 +1,6 @@
 /* Start Variables */
 :root {
-  --main-color: #8333bf;
+  --main-color: #3CB371;
   --white-color: #FFFFFF;
   --section-padding: 60px;
   --main-duration: 0.5s;
@@ -202,6 +202,27 @@ body {
     font-size: 18px;
   }
 }
+.landing .text button {
+  font-size: 20px;
+  margin-top: 50px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: #333;
+  font-weight: 500;
+  background-color: #ddd;
+  transition: 0.5s margin-left ease-in-out, 0.3s box-shadow ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+.landing .text button:hover {
+  margin-left: 5px;
+  box-shadow: 0 0 0 3px #ececec, 0 0 0 6px var(--main-color);
+}
+@media (max-width: 767px) {
+  .landing .text button {
+    font-size: 16px;
+  }
+}
 .landing .image img {
   position: relative;
   width: 600px;
@@ -227,6 +248,49 @@ body {
   animation: bouncing 1.5s infinite;
 }
 /* End Landing */
+/* Start System */
+.system .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.system .container .col {
+  min-width: 150px;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  background-color: #3cb372bb;
+  border-radius: 5px;
+  cursor: default;
+  transition: 0.5s box-shadow linear;
+}
+.system .container .col:hover {
+  box-shadow: 0 0 0 3px #ececec, 0 0 0 6px var(--main-color);
+  background-color: var(--main-color);
+}
+.system .container .col p {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+}
+@media screen and (max-width: 991px) {
+  .system .container .col p {
+    font-size: 22px;
+  }
+}
+.system .container .col p i{
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+/* End System */
 /* Start Features */
 .features {
   padding-top: var(--section-padding);
